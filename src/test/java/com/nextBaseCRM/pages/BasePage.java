@@ -1,0 +1,89 @@
+package com.nextBaseCRM.pages;
+
+import com.nextBaseCRM.utilities.BrowserUtils;
+import com.nextBaseCRM.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+
+public abstract class BasePage {
+
+    @FindBy(id = "pagetitle")
+    public WebElement pageSubTitle;
+
+    @FindBy(css = "#user-name")
+    public WebElement userName;
+
+    @FindBy(linkText = "Log out")
+    public WebElement logOutLink;
+
+    @FindBy(linkText = "My User")
+    public WebElement myProfile;
+
+    @FindBy(id="logo_24_text")
+    public WebElement homeButton;
+
+
+    public BasePage() {
+        PageFactory.initElements(Driver.get(), this);
+    }
+
+
+    public String getPageSubTitle() {
+
+        return pageSubTitle.getText();
+    }
+
+    public String getUserName(){
+        BrowserUtils.waitForVisibility(userName, 5);
+        return userName.getText();
+    }
+
+
+    public void logOut(){
+        BrowserUtils.waitFor(2);
+        BrowserUtils.clickWithJS(userName);
+        BrowserUtils.clickWithJS(logOutLink);
+    }
+    public void goToMyProfile(){
+        BrowserUtils.waitForClickablility(userName, 5).click();
+        BrowserUtils.waitForClickablility(myProfile, 5).click();
+
+    }
+
+    public void navigateToModule(String module , String tab) {
+
+        String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'menu-item-link-text')]";
+        String tabLocator = "//span/span[contains(text(),'"+ tab +"')]";
+
+        try {
+            BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(moduleLocator)));
+            Driver.get().findElement(By.xpath(moduleLocator)).click();
+        } catch (Exception e) {
+            BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
+        }
+        try {
+            BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(tabLocator)));
+            Driver.get().findElement(By.xpath(tabLocator)).click();
+        } catch (Exception e) {
+            BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(tabLocator)),  5);
+        }
+    }
+
+    public void navigateWithSiteMap (String moduleName){
+        WebElement siteMap = Driver.get().findElement(By.id("sitemap-menu"));
+        siteMap.click();
+        List<WebElement> sectionItems = Driver.get().findElements(By.className("sitemap-section-item"));
+
+        for (WebElement item : sectionItems) {
+            if(item.getText().equalsIgnoreCase(moduleName)){
+                item.click();
+                break;
+            }
+        }
+    }
+
+}
