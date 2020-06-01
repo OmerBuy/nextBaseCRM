@@ -15,7 +15,7 @@
 
     <dependencies>
 
-        <dependency>
+        <dependency>w
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.1.0</version>
