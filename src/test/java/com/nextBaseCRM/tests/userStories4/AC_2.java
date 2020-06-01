@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 
 public class AC_2 {
 
+    // 2. User should be able to add users from selecting contact from E-mail user,
+    //    Employees and Departments and Recent contact lists.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();

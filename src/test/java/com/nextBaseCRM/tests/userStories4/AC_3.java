@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class AC_3 {
 
+    //3. User should be able to attach link by clicking on the link icon.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();

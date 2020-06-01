@@ -9,7 +9,8 @@ import org.testng.annotations.Test;
 
 public class AC_1 extends TestBase {
 
-
+    //1. User should be able to click on upload files icon to upload files and pictures from local disks,
+    //   download from external drive, select documents from bixtrix24, and create files to upload.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();
