@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class AC_5 {
 
+// 5. User should be able to create a quote by clicking on the Comma icon.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();

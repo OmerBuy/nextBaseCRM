@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class AC_4 {
 
+    // 4. User should be able to insert videos by clicking on the video icon and entering the video URL.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();
