@@ -1,4 +1,4 @@
-package com.cybertek.tests;
+package com.nextBaseCRM.tests;
 
 public class testClass {
     public static void main(String[] args) {

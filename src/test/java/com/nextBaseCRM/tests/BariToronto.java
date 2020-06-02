@@ -1,6 +1,6 @@
-package com.cybertek.tests;
+package com.nextBaseCRM.tests;
 
-public class Bari {
+public class BariToronto {
     public static void main(String[] args) {
         System.out.println("BARI BARI LEICESTER");
         System.out.println("MILANO BARI LEICESTER");
