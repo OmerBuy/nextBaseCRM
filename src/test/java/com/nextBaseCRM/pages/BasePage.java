@@ -14,7 +14,7 @@ public abstract class BasePage {
     @FindBy(id = "pagetitle")
     public WebElement pageSubTitle;
 
-    @FindBy(css = "#user-name")
+    @FindBy(id = "user-name")
     public WebElement userName;
 
     @FindBy(linkText = "Log out")
@@ -67,7 +67,7 @@ public abstract class BasePage {
         }
         try {
             // this if statement is added to handle the situation to click "MORE" tab
-            if (tab.equals("File")||tab.equals("Appreciation")||tab.equals("Announcement")||tab.equals("Workflow")){
+            if (tab.equals("File") || tab.equals("Appreciation")||tab.equals("Announcement")||tab.equals("Workflow")){
                 Driver.get().findElement(By.id("feed-add-post-form-link-text")).click();
             }
             BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(tabLocator)));

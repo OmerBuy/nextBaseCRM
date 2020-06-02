@@ -1,13 +1,14 @@
-package com.nextBaseCRM.tests.userStories4;
+package com.nextBaseCRM.tests.userStory4;
 
 import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.pages.Poll;
+import com.nextBaseCRM.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AC_3 {
+public class AC_4 extends TestBase {
 
-    //3. User should be able to attach link by clicking on the link icon.
+    // 4. User should be able to insert videos by clicking on the video icon and entering the video URL.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();
