@@ -19,12 +19,17 @@ public class Test_US6_AC1 extends TestBase {
 
         AppreciationPage appreciationPage = new AppreciationPage();
 
-        extentLogger.info("Send Capture File");
-        appreciationPage.uploadFilesFromPC("src/test/resources/Capture.PNG");
+        extentLogger.info("Send Ja-va File");
+        appreciationPage.uploadFilesFromPC("src/test/resources/Ja-va.jpg");
         BrowserUtils.waitFor(2);
 
-        WebElement fileElement = appreciationPage.getUploadFileElement("Capture");
-        Assert.assertTrue(fileElement.isDisplayed());
+        String expectedFileName = "Ja-va";
+        extentLogger.info("Get the name of the uploaded file");
+
+        String actualFileName = appreciationPage.getNameOfLastUploadedPhoto();
+        Assert.assertTrue(actualFileName.contains(expectedFileName));
+
+        extentLogger.pass("PASS: Upload from PC");
     }
 
     @Test
@@ -32,11 +37,16 @@ public class Test_US6_AC1 extends TestBase {
 
         extentLogger = report.createTest("Selecting Files from External device");
 
-        extentLogger.info("Login as Marketing");
-        new LoginPage().loginAsMarketing();
+        extentLogger.info("Login as HR");
+        new LoginPage().loginAsHR();
 
         AppreciationPage appreciationPage = new AppreciationPage();
         appreciationPage.uploadFilesFromExternalDrive("Some address");
+
+        extentLogger.info("After sending Verify that the system displays the error message");
+        String actualErrorMessage = appreciationPage.errorMessageElement.getText();
+        String expectedErrorMessage = "The message title is not specified";
+        Assert.assertEquals(actualErrorMessage,expectedErrorMessage,"Verify the error message");
 
         extentLogger.pass("PASSED: External Drive");
     }
@@ -50,7 +60,14 @@ public class Test_US6_AC1 extends TestBase {
         new LoginPage().loginAsMarketing();
 
         AppreciationPage appreciationPage = new AppreciationPage();
-        appreciationPage.uploadFilesFromBitrix24("Capture");
+        extentLogger.info("Send the photo among recent named Ja-va");
+        appreciationPage.uploadFilesFromBitrix24("Ja-va");
+
+        String expectedFileName = "Ja-va";
+
+        String actualFileName = appreciationPage.getNameOfLastUploadedPhoto();
+
+        Assert.assertTrue(actualFileName.contains(expectedFileName),"Verify that file is displayed");
 
         extentLogger.pass("PASSED: Upload from Bitrix24");
     }
