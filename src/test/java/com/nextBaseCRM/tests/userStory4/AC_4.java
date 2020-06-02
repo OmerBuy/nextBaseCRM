@@ -1,4 +1,4 @@
-package com.nextBaseCRM.tests.userStories4;
+package com.nextBaseCRM.tests.userStory4;
 
 import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.pages.Poll;

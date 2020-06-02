@@ -1,13 +1,14 @@
-package com.nextBaseCRM.tests.userStories4;
+package com.nextBaseCRM.tests.userStory4;
 
 import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.pages.Poll;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AC_3 {
+public class AC_2 {
 
-    //3. User should be able to attach link by clicking on the link icon.
+    // 2. User should be able to add users from selecting contact from E-mail user,
+    //    Employees and Departments and Recent contact lists.
     @BeforeMethod
     public void pollSetUp() {
         new LoginPage().loginAsHR();
