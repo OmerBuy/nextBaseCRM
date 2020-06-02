@@ -66,6 +66,10 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
         try {
+            // this if statement is added to handle the situation to click "MORE" tab
+            if (tab.equals("File")||tab.equals("Appreciation")||tab.equals("Announcement")||tab.equals("Workflow")){
+                Driver.get().findElement(By.id("feed-add-post-form-link-text")).click();
+            }
             BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(tabLocator)));
             Driver.get().findElement(By.xpath(tabLocator)).click();
         } catch (Exception e) {
