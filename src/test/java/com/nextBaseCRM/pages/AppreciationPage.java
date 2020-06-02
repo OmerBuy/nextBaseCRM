@@ -3,6 +3,7 @@ package com.nextBaseCRM.pages;
 import com.nextBaseCRM.utilities.BrowserUtils;
 import com.nextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -105,6 +106,13 @@ public class AppreciationPage extends BasePage{
     @FindBy (id="blog-submit-button-cancel")
     public WebElement uploadFileCancelButton;
 
+    @FindBy (className = "feed-add-info-text")
+    public WebElement errorMessageElement;
+
+    // Select Document Button under uploading files icon
+    @FindBy (xpath = "//span[.='Select document']")
+    public  WebElement selectDocumentBtn;
+
 
 
 
@@ -128,6 +136,12 @@ public class AppreciationPage extends BasePage{
         BrowserUtils.waitForClickablility(uploadFilesIcon,5);
         uploadFilesIcon.click();
         uploadFilesAndImages.sendKeys(filePath);
+        try {
+            Driver.get().switchTo().alert().accept();
+        }catch (NoAlertPresentException e){
+            e.printStackTrace();
+        }
+        BrowserUtils.waitForClickablility(sendButton,3);
         sendButton.click();
     }
 
@@ -138,7 +152,7 @@ public class AppreciationPage extends BasePage{
         uploadFilesIcon.click();
         downloadFromExternalDrive.click();
         Driver.get().findElement(By.name("title_value")).sendKeys(address);
-        Driver.get().findElement(By.xpath("//span[.='Select document']")).click();
+        selectDocumentBtn.click();
 
         sendButton.click();
     }
@@ -149,15 +163,18 @@ public class AppreciationPage extends BasePage{
         BrowserUtils.waitForClickablility(uploadFilesIcon,5);
         uploadFilesIcon.click();
         selectDocumentFromBitrix24.click();
-        List<WebElement> items=Driver.get().findElements(By.className("bx-file-dialog-content-wrap"));
+        List<WebElement> items=Driver.get().findElements(By.cssSelector(".bx-file-dialog-content-wrap>div"));
+
         for(WebElement item:items){
+            //BrowserUtils.waitForStaleElement(item);
             if(item.getText().contains(fileName)){
                 item.click();
                 break;
             }
 
         }
-
+        selectDocumentBtn.click();
+        BrowserUtils.waitForClickablility(sendButton,2);
         sendButton.click();
     }
 
@@ -203,9 +220,11 @@ public class AppreciationPage extends BasePage{
         linkUrlInputbox.sendKeys(linkURL);
 
         Driver.get().findElement(By.className("adm-btn-save")).click();
+
     }
 
     public String getNameOfLastUploadedPhoto(){
+        BrowserUtils.waitFor(2);
         return lastUploadedPhoto.getAttribute("data-bx-title");
     }
 
