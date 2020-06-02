@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class git Driver {
+public class Driver {
 
     //this class is created as a singleton design pattern
     //Driver Class goes to ConfigurationReader and pick up values
@@ -78,4 +78,3 @@ public class git Driver {
         }
     }
 }
-
