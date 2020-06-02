@@ -21,7 +21,7 @@ public class Poll extends BasePage{
     @FindBy(xpath = "//span[@class=\"bxhtmled-top-bar-btn bxhtmled-button-video\"]/i")
     public WebElement insertVideoIcon;
 
-    @FindBy(id="bx-b-tag-input-blogPostForm")
+    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-quote']")
     public WebElement quoteIcon;
 
     @FindBy(linkText = "Uploaded files")
@@ -36,7 +36,8 @@ public class Poll extends BasePage{
     @FindBy(id = "blog-submit-button-save")
     public WebElement sendButton;
 
-
+    @FindBy(tagName = "blockquote")
+    public WebElement quoteDisplayed;
 
     public void differentUploadChoices(String tab, String module) {
         //span[normalize-space(text())='My Drive']
