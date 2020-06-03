@@ -20,5 +20,7 @@ public class Poll extends BasePage{
     @FindBy(id="bx-b-tag-input-blogPostForm")
     public WebElement quoteIcon;
 
+    @FindBy(xpath = "//*[@id=\"bx-b-quote-task-form-lifefeed_task_form\"]/span/i")
+    public WebElement commaIcon;
 
 }

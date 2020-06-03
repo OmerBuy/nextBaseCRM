@@ -23,9 +23,9 @@ public class TestBase {
     protected WebDriver driver;
     protected Actions actions;
     protected WebDriverWait wait;
-    protected ExtentReports report;
+    protected static ExtentReports report;
     protected ExtentHtmlReporter htmlReporter;
-    protected ExtentTest extentLogger;
+    protected static ExtentTest extentLogger;
 
     @BeforeTest
     public void setUpTest(){
@@ -55,7 +55,7 @@ public class TestBase {
     @BeforeMethod
     public void setUpMethod(){
         driver = Driver.get();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actions = new Actions(driver);
         wait = new WebDriverWait(driver,10);
@@ -82,7 +82,7 @@ public class TestBase {
         }
         //close driver
         Thread.sleep(2000);
-        Driver.closeDriver();
+        //Driver.closeDriver();
     }
 
     @AfterTest
