@@ -17,6 +17,9 @@ public class Test_US6_AC2 extends TestBase {
 
         AppreciationPage appreciationPage = new AppreciationPage();
 
+        extentLogger.info("Navigate to Appreciation");
+        appreciationPage.navigateToModule("Activity Stream", "Appreciation");
+
         extentLogger.info("Select a given mail inside the list");
         appreciationPage.sendToEmployeesAndDepartments("helpdesk19@cybertekschool.com");
 
@@ -27,9 +30,6 @@ public class Test_US6_AC2 extends TestBase {
         Assert.assertEquals(actualText,expectedText,"verify the selected email");
 
         extentLogger.pass("PASS");
-
-
-
     }
 
 

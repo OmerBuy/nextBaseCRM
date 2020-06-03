@@ -34,7 +34,6 @@ public class LoginPage {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginBtn.click();
-
     }
 
     public void loginAsMarketing(){
