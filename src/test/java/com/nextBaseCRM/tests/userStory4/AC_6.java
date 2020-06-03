@@ -4,6 +4,7 @@ import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.pages.Poll;
 import com.nextBaseCRM.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class AC_6 extends TestBase {
 
@@ -13,8 +14,11 @@ public class AC_6 extends TestBase {
     public void pollSetUp() {
         new LoginPage().loginAsHR();
         new Poll().navigateToModule("Activity Stream", "Poll");
-
     }
+
+
+
+
 
 
 }

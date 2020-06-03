@@ -4,6 +4,7 @@ import com.nextBaseCRM.pages.AppreciationPage;
 import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.tests.TestBase;
 import com.nextBaseCRM.utilities.BrowserUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
