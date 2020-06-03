@@ -39,6 +39,16 @@ public class Poll extends BasePage{
     @FindBy(tagName = "blockquote")
     public WebElement quoteDisplayed;
 
+    @FindBy(xpath = "(//span[contains(@class,'feed-add-post-form-but feed-add-mention')])[1]")
+    public WebElement mentionButton;
+
+    @FindBy(xpath = "//a[contains(@class,'bx-finder-box-tab bx-lm-tab-department')]")
+    public WebElement employeeBtn;
+
+    @FindBy(xpath = "//div[contains(@class,'bx-finder-company-department-arrow')]")
+    public WebElement dropDownList;
+    ////div[.='Cyber Vet']
+
     public void differentUploadChoices(String tab, String module) {
         //span[normalize-space(text())='My Drive']
         //(//span[normalize-space(text())='Download from external drive'])[1]
