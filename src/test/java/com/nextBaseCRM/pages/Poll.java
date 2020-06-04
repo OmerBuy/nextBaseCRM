@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class Poll extends BasePage{
 
     @FindBy(id = "bx-b-uploadfile-blogPostForm")
@@ -39,6 +41,16 @@ public class Poll extends BasePage{
     @FindBy(tagName = "blockquote")
     public WebElement quoteDisplayed;
 
+    @FindBy(xpath = "(//span[contains(@class,'feed-add-post-form-but feed-add-mention')])[1]")
+    public WebElement mentionButton;
+
+    @FindBy(xpath = "//a[contains(@class,'bx-finder-box-tab bx-lm-tab-department')]")
+    public WebElement employeeBtn;
+
+    @FindBy(xpath = "//div[contains(@class,'bx-finder-company-department-arrow')]")
+    public WebElement dropDownList;
+    ////div[.='Cyber Vet']
+
     public void differentUploadChoices(String tab, String module) {
         //span[normalize-space(text())='My Drive']
         //(//span[normalize-space(text())='Download from external drive'])[1]
@@ -61,4 +73,6 @@ public class Poll extends BasePage{
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+
 }
