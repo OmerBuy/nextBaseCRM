@@ -54,6 +54,12 @@ public class Poll extends BasePage{
     @FindBy (xpath = "(//input[contains(@type,'checkbox')])[2]")
     public WebElement checkBoxBtn;
 
+    @FindBy (id = "lhe_button_editor_blogPostForm")
+    public WebElement visiulEditor;
+
+    @FindBy (xpath = "//textarea[contains(@class,'bxhtmled-textarea')]")
+    public WebElement messageBox;
+
 
 
 
