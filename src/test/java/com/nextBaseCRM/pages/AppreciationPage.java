@@ -50,6 +50,7 @@ public class AppreciationPage extends BasePage{
 
     @FindBy (id ="video_idPostFormLHE_blogPostForm-source")
     public WebElement videoSourceInputBox;
+
     @FindBy (id="undefined")
     public  WebElement videoSaveBtn;
 
@@ -60,11 +61,17 @@ public class AppreciationPage extends BasePage{
     @FindBy (id = "feed-add-post-form-tab-message")
     public WebElement messageTab;
 
+    @FindBy(className = "bxhtmled-textarea")
+    public WebElement textArea;
+
     @FindBy(xpath="(//img)[4]")
     public WebElement lastUploadedPhoto;
 
     @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner']/a[@target='_blank'])[1]")
     public WebElement lastAddedLink;
+
+    @FindBy(xpath = "(//table[@class='blogquote'])[1]")
+    public WebElement lastAddedQuote;
 
 
 
