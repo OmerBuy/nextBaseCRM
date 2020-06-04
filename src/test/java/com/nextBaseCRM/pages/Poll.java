@@ -3,6 +3,7 @@ package com.nextBaseCRM.pages;
 import com.nextBaseCRM.utilities.BrowserUtils;
 import com.nextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,7 @@ public class Poll extends BasePage{
     @FindBy(id = "bx-b-uploadfile-blogPostForm")
     public WebElement uploadIcon;
 
-    @FindBy(id="bx-destination-tag")
+    @FindBy(xpath = "//span[contains(text(),\"All employees\")]")
     public WebElement addEmployees;
 
     @FindBy(xpath = "//span[@class=\"bxhtmled-top-bar-btn bxhtmled-button-link\"]/i")
@@ -39,6 +40,46 @@ public class Poll extends BasePage{
     @FindBy(tagName = "blockquote")
     public WebElement quoteDisplayed;
 
+    @FindBy(xpath = "//input[@name=\"bxu_files[]\"]")
+    public WebElement uploadFilesdrag;
+
+    @FindBy(css = ".files-name-edit-btn")
+    public WebElement editName;
+
+    @FindBy(xpath = "//a[contains(text(),'Employees and departments')]")
+    public WebElement addEmployesByDepartment;
+
+    @FindBy(xpath = "//a[contains(@id,'destDepartmentTab_destination')]")
+    public WebElement getAddEmployeesByRecent;
+
+    @FindBy(xpath = "//a[contains(@id,'destEmailTab_destination')]")
+    public WebElement getAddEmployeesByEmail;
+
+    @FindBy(xpath = "//div[contains(text(),'marketing19@cybertekschool.com')]")
+    public WebElement addMarketing19;
+
+    @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
+    public WebElement textFrame;
+
+    @FindBy(xpath = "//body[@contenteditable=\"true\"]")
+    public WebElement writeText;
+
+    @FindBy(id = "linkidPostFormLHE_blogPostForm-href")
+    public WebElement linkUrl;
+
+    @FindBy(id="linkidPostFormLHE_blogPostForm-text")
+    public WebElement textUrl;
+
+    @FindBy(id = "cancel")
+    public WebElement linkCancel;
+
+    @FindBy(id="video_idPostFormLHE_blogPostForm-source")
+    public WebElement videoUrl;
+
+    @FindBy(id ="video_idPostFormLHE_blogPostForm-title")
+    public WebElement videoSave;
+
+
     public void differentUploadChoices(String tab, String module) {
         //span[normalize-space(text())='My Drive']
         //(//span[normalize-space(text())='Download from external drive'])[1]
@@ -61,4 +102,16 @@ public class Poll extends BasePage{
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+    public void attachNameFile(String name ,String filePath){
+       // String filepath="C:\\Users\\muham\\Desktop\\SDET\\Coding\\nextBaseCRM\\src\\test\\resources\\RegressionTest10.jpg";
+        uploadFilesdrag.sendKeys(filePath);
+        BrowserUtils.clickWithJS(editName);
+        WebElement currentElement = Driver.get().switchTo().activeElement();
+        String aa = Keys.chord(Keys.CONTROL+"a");
+        //currentElement.sendKeys(Keys.CONTROL+"a");
+        currentElement.sendKeys(aa);
+        currentElement.sendKeys(Keys.SHIFT+name);
+    }
+
 }
