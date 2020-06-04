@@ -3,6 +3,7 @@ package com.nextBaseCRM.pages;
 import com.nextBaseCRM.utilities.BrowserUtils;
 import com.nextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,13 +63,16 @@ public class AppreciationPage extends BasePage{
     @FindBy(xpath="(//img)[4]")
     public WebElement lastUploadedPhoto;
 
+    @FindBy(xpath = "(//div[@class='feed-post-text-block-inner-inner']/a[@target='_blank'])[1]")
+    public WebElement lastAddedLink;
+
 
 
 
     @FindBy (className = "feed-add-post-destination-text")
     public WebElement toAllEmployees;
 
-    @FindBy (xpath = "(//*[@class='feed-add-post-destination-text'])[2]")
+    @FindBy (xpath = "//span[@class='feed-add-post-destination feed-add-post-destination-users']")
     public WebElement destinationBox;
 
     //recent locator that appears after clicking to allEmployees
@@ -180,7 +184,6 @@ public class AppreciationPage extends BasePage{
 
     public void sendToEmployeesAndDepartments(String employeeOrDepartmentName){
 
-        messageTab.click();
         toAllEmployees.click();
 
         BrowserUtils.clickWithJS(employeesAndDepartments);
@@ -214,12 +217,11 @@ public class AppreciationPage extends BasePage{
 
     public void sendLink (String linkText, String linkURL){
 
-        messageTab.click();
         linkIcon.click();
         linkTextInputbox.sendKeys(linkText);
-        linkUrlInputbox.sendKeys(linkURL);
+        linkUrlInputbox.sendKeys(linkURL+ Keys.ENTER);
 
-        Driver.get().findElement(By.className("adm-btn-save")).click();
+        sendButton.click();
 
     }
 
