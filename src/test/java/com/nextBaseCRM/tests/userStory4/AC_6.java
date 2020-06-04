@@ -39,14 +39,17 @@ public class AC_6 extends TestBase {
         BrowserUtils.clickWithJS(poll.employeeBtn);
         Thread.sleep(3000);
 
+        poll.employeeList("helpdesk28@cybertekschool.com");
+        BrowserUtils.waitFor(5);
+
+        poll.checkBoxBtn.click();
+
+        BrowserUtils.clickWithJS(poll.sendButton);
 
 
 
-       /*
 
-        //click yahoo
-        dropdownOptions.get(3).click();
-         */
+
 
 
 
