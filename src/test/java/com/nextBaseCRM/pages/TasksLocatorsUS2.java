@@ -25,6 +25,9 @@ public class TasksLocatorsUS2 extends BasePage{
     //""(//td[@class='diskuf-selector wd-fa-add-file-light-cell wd-fa-add-file-from-main'])[5]")
     public WebElement uploadFilesAndImages;
 
+    @FindBy(xpath = "//input[@name=\"bxu_files[]\"]")
+    public WebElement uploadFilesdrag;
+
     @FindBy(xpath = "//*[@id=\"bx-b-quote-task-form-lifefeed_task_form\"]/span/i")
     public WebElement commaIcon;
 

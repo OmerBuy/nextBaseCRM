@@ -45,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jun 4, 2020 01:31:34 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Jun 4, 2020 06:51:13 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -126,15 +126,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Assigning tasks by clicking on Task tab under Active Stream</span>
-						<span class='test-time'>Jun 4, 2020 01:31:56 AM</span>
+						<span class='test-name'>Upload Files From PC Test</span>
+						<span class='test-time'>Jun 4, 2020 06:51:24 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jun 4, 2020 01:31:56 AM</span>
-	<span class='label end-time'>Jun 4, 2020 01:32:37 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 41s+412ms</span>
+	<span class='label start-time'>Jun 4, 2020 06:51:24 PM</span>
+	<span class='label end-time'>Jun 4, 2020 06:51:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+790ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -148,7 +148,7 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>1:31:56 AM</td>
+				<td class='timestamp'>6:51:24 PM</td>
 				<td class='step-details'>
 						Login as Marketing
 					
@@ -156,33 +156,41 @@
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>1:32:27 AM</td>
+				<td class='timestamp'>6:51:35 PM</td>
 				<td class='step-details'>
-						Navigating from Activity Stream Tab to Task Module
+						Navigate to Activity and Task
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:51:37 PM</td>
+				<td class='step-details'>
+						upload a file
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>1:32:37 AM</td>
+				<td class='timestamp'>6:51:47 PM</td>
 				<td class='step-details'>
-						highPriorityTest
+						uploadFilesFromTaskPage
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>1:32:37 AM</td>
+				<td class='timestamp'>6:51:48 PM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="tasks-task-priority-cb"]"}
+						<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='bxu_files[]']"}
   (Session info: chrome=83.0.4103.61)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-18U69FD', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\volkan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52070}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: e954e0d13c97c27feb51266109c0deff
-*** Element info: {Using=xpath, value=//*[@id="tasks-task-priority-cb"]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\volkan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61398}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: acc3507576a8190d43d30498ac739ff4
+*** Element info: {Using=name, value=bxu_files[]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -195,13 +203,13 @@ Session ID: e954e0d13c97c27feb51266109c0deff
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at com.nextBaseCRM.tests.userStory2.Test_US2_AC1.highPriorityTest(Test_US2_AC1.java:32)
+	at com.nextBaseCRM.tests.userStory2.Test_US2_AC3.uploadFilesFromTaskPage(Test_US2_AC3.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -237,7 +245,7 @@ Session ID: e954e0d13c97c27feb51266109c0deff
 	</table>
 </div>
 						<ul class='screenshots'>
-							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='E:\cybertek\nextBaseCRM/test-output/Screenshots/highPriorityTest20200604013237.png' src='E:\cybertek\nextBaseCRM/test-output/Screenshots/highPriorityTest20200604013237.png' data-src='E:\cybertek\nextBaseCRM/test-output/Screenshots/highPriorityTest20200604013237.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='E:\cybertek\nextBaseCRM/test-output/Screenshots/uploadFilesFromTaskPage20200604065147.png' src='E:\cybertek\nextBaseCRM/test-output/Screenshots/uploadFilesFromTaskPage20200604065147.png' data-src='E:\cybertek\nextBaseCRM/test-output/Screenshots/uploadFilesFromTaskPage20200604065147.png'></li>
 						</ul>
 					</div>
 				</li>
@@ -296,18 +304,18 @@ Session ID: e954e0d13c97c27feb51266109c0deff
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jun 4, 2020 01:31:56 AM</td>
-										<td class='linked' test-id='1'>Assigning tasks by clicking on Task tab under Active Stream</td>
+										<td>Jun 4, 2020 06:51:24 PM</td>
+										<td class='linked' test-id='1'>Upload Files From PC Test</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="tasks-task-priority-cb"]"}
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='bxu_files[]']"}
   (Session info: chrome=83.0.4103.61)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-18U69FD', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\volkan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52070}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: e954e0d13c97c27feb51266109c0deff
-*** Element info: {Using=xpath, value=//*[@id="tasks-task-priority-cb"]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\volkan\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61398}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: acc3507576a8190d43d30498ac739ff4
+*** Element info: {Using=name, value=bxu_files[]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -320,13 +328,13 @@ Session ID: e954e0d13c97c27feb51266109c0deff
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at com.nextBaseCRM.tests.userStory2.Test_US2_AC1.highPriorityTest(Test_US2_AC1.java:32)
+	at com.nextBaseCRM.tests.userStory2.Test_US2_AC3.uploadFilesFromTaskPage(Test_US2_AC3.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -391,19 +399,19 @@ Session ID: e954e0d13c97c27feb51266109c0deff
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jun 4, 2020 01:31:34 AM</div>
+					<div class='panel-lead'>Jun 4, 2020 06:51:13 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jun 4, 2020 01:32:39 AM</div>
+			 		<div class='panel-lead'>Jun 4, 2020 06:51:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 5s+523ms</div>
+					<div class='panel-lead'>0h 0m 37s+318ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -470,7 +478,7 @@ Session ID: e954e0d13c97c27feb51266109c0deff
 		</script>
 		<script>
 			var timeline = {
-			        "Assigning tasks by clicking on Task tab under Active Stream":41.412
+			        "Upload Files From PC Test":23.79
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
