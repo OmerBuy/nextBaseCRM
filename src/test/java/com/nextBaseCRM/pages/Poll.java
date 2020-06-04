@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Poll extends BasePage{
 
     @FindBy(id = "bx-b-uploadfile-blogPostForm")
@@ -47,7 +50,12 @@ public class Poll extends BasePage{
 
     @FindBy(xpath = "//div[contains(@class,'bx-finder-company-department-arrow')]")
     public WebElement dropDownList;
-    ////div[.='Cyber Vet']
+
+    @FindBy (xpath = "(//input[contains(@type,'checkbox')])[2]")
+    public WebElement checkBoxBtn;
+
+
+
 
     public void differentUploadChoices(String tab, String module) {
         //span[normalize-space(text())='My Drive']
@@ -71,4 +79,19 @@ public class Poll extends BasePage{
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+    public void employeeList(String employeeName) {
+        List<WebElement> elementList = Driver.get().findElements(By.cssSelector(".bx-finder-company-department-employee.bx-finder-element"));
+        //List<String> elementsText = BrowserUtils.getElementsText(elementList);
+        for (WebElement element : elementList) {
+            if (element.getText().contains(employeeName)) {
+                element.click();
+                break;
+            }
+        }
+
+
+    }
+
+
 }
