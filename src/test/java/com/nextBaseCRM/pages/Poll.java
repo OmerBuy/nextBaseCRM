@@ -59,6 +59,12 @@ public class Poll extends BasePage{
 
     @FindBy (xpath = "//textarea[contains(@class,'bxhtmled-textarea')]")
     public WebElement messageBox;
+    
+    @FindBy (xpath = "//span[contains(@title,'Topic')]")
+    public WebElement topicBtn;
+
+    @FindBy (id = "POST_TITLE")
+    public WebElement topicText;
 
 
 
