@@ -27,6 +27,12 @@ public abstract class BasePage {
     public WebElement homeButton;
 
 
+
+
+
+
+
+
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
