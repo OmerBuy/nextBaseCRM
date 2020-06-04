@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Poll extends BasePage{
 
     @FindBy(id = "bx-b-uploadfile-blogPostForm")
@@ -40,6 +43,7 @@ public class Poll extends BasePage{
     @FindBy(tagName = "blockquote")
     public WebElement quoteDisplayed;
 
+<<<<<<< HEAD
     @FindBy(xpath = "//input[@name=\"bxu_files[]\"]")
     public WebElement uploadFilesdrag;
 
@@ -78,6 +82,21 @@ public class Poll extends BasePage{
 
     @FindBy(id ="video_idPostFormLHE_blogPostForm-title")
     public WebElement videoSave;
+=======
+    @FindBy(xpath = "(//span[contains(@class,'feed-add-post-form-but feed-add-mention')])[1]")
+    public WebElement mentionButton;
+
+    @FindBy(xpath = "//a[contains(@class,'bx-finder-box-tab bx-lm-tab-department')]")
+    public WebElement employeeBtn;
+
+    @FindBy(xpath = "//div[contains(@class,'bx-finder-company-department-arrow')]")
+    public WebElement dropDownList;
+
+    @FindBy (xpath = "(//input[contains(@type,'checkbox')])[2]")
+    public WebElement checkBoxBtn;
+
+
+>>>>>>> 847f94e0fc402996445c8791f1469fd30cb59e1f
 
 
     public void differentUploadChoices(String tab, String module) {
@@ -103,6 +122,7 @@ public class Poll extends BasePage{
         }
     }
 
+<<<<<<< HEAD
     public void attachNameFile(String name ,String filePath){
        // String filepath="C:\\Users\\muham\\Desktop\\SDET\\Coding\\nextBaseCRM\\src\\test\\resources\\RegressionTest10.jpg";
         uploadFilesdrag.sendKeys(filePath);
@@ -114,4 +134,20 @@ public class Poll extends BasePage{
         currentElement.sendKeys(Keys.SHIFT+name);
     }
 
+=======
+    public void employeeList(String employeeName) {
+        List<WebElement> elementList = Driver.get().findElements(By.cssSelector(".bx-finder-company-department-employee.bx-finder-element"));
+        //List<String> elementsText = BrowserUtils.getElementsText(elementList);
+        for (WebElement element : elementList) {
+            if (element.getText().contains(employeeName)) {
+                element.click();
+                break;
+            }
+        }
+
+
+    }
+
+
+>>>>>>> 847f94e0fc402996445c8791f1469fd30cb59e1f
 }
