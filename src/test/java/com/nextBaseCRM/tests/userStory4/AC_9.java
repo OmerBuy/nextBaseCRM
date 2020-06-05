@@ -14,8 +14,12 @@ public class AC_9 {
         new LoginPage().loginAsHR();
         new Poll().navigateToModule("Activity Stream", "Poll");
     }
+    /*
+    User should be able to click on ""Record Video"" tab to record a video and
+    attach it with the message.
+     */
 
-
+    //It does not work in the page, probably there is a bug
 
 
 }
