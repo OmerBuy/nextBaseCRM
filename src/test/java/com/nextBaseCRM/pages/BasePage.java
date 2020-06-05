@@ -54,38 +54,13 @@ public abstract class BasePage {
 
     }
 
-    public void navigateToModule(String module , String tab) {
+    public void navigateToModule (String module , String tab) {
 
         String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'menu-item-link-text')]";
         String tabLocator = "//span/span[contains(text(),'"+ tab +"')]";
-
-        try {
-            BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(moduleLocator)));
-            Driver.get().findElement(By.xpath(moduleLocator)).click();
-        } catch (Exception e) {
-            BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
-        }
-        try {
-            // this if statement is added to handle the situation to click "MORE" tab
-            if (tab.equals("File") || tab.equals("Appreciation")||tab.equals("Announcement")||tab.equals("Workflow")){
-                Driver.get().findElement(By.id("feed-add-post-form-link-text")).click();
-            }
-            BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(tabLocator)));
-            Driver.get().findElement(By.xpath(tabLocator)).click();
-        } catch (Exception e) {
-            BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(tabLocator)),  5);
-        }
-    }
-
-    public void newNavigateMethod (String module , String tab) {
-
-        String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'menu-item-link-text')]";
-        String tabLocator = "//span/span[contains(text(),'"+ tab +"')]";
-
 
         BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(moduleLocator)));
         Driver.get().findElement(By.xpath(moduleLocator)).click();
-
 
         // this if statement is added to handle the situation to click "MORE" tab
         if (tab.equals("File") || tab.equals("Appreciation")||tab.equals("Announcement")||tab.equals("Workflow")){
@@ -94,17 +69,13 @@ public abstract class BasePage {
             for (WebElement element : moreElements) {
                 if(element.getText().equals(tab)){
                     element.click();
+                    return;
                 }
             }
         }
         BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(tabLocator)));
         Driver.get().findElement(By.xpath(tabLocator)).click();
-
     }
-
-
-
-
 
     public void navigateWithSiteMap (String moduleName){
         WebElement siteMap = Driver.get().findElement(By.id("sitemap-menu"));

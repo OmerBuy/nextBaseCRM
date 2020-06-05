@@ -91,15 +91,13 @@ public class Test_US6_AC1 extends TestBase {
     @Test
     public void basePageTest() {
 
-        extentLogger = report.createTest("Uploading Files from Bitrix24");
-
-        extentLogger.info("Login as Marketing");
         new LoginPage().loginAsMarketing();
 
         AppreciationPage appreciationPage = new AppreciationPage();
 
-        extentLogger.info("Navigate to Appreciation");
-        appreciationPage.navigateToModule("Activity Stream", "Appreciation");
+        appreciationPage.newNavigateMethod("Activity Stream", "Task");
+
+        BrowserUtils.waitFor(5);
 
 
     }
