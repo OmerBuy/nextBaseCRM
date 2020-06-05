@@ -88,19 +88,6 @@ public class Test_US6_AC1 extends TestBase {
         extentLogger.pass("PASSED: Upload from Bitrix24");
     }
 
-    @Test
-    public void basePageTest() {
-
-        new LoginPage().loginAsMarketing();
-
-        AppreciationPage appreciationPage = new AppreciationPage();
-
-        appreciationPage.newNavigateMethod("Activity Stream", "Task");
-
-        BrowserUtils.waitFor(5);
-
-
-    }
 
 
 
