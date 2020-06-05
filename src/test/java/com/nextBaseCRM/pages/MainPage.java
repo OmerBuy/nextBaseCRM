@@ -3,9 +3,9 @@ package com.nextBaseCRM.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MainPage {
+public class MainPage extends BasePage {
 
-    @FindBy(xpath = "//span[text()='Mac OS']")
+    @FindBy(css = ".b24-app-icon.b24-app-icon-macos")
     public WebElement macosButton;
 
     @FindBy (xpath = "//span[text()='Windows']")

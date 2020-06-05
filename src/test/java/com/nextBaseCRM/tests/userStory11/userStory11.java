@@ -5,9 +5,7 @@ import com.nextBaseCRM.pages.MainPage;
 import com.nextBaseCRM.tests.TestBase;
 import com.nextBaseCRM.utilities.BrowserUtils;
 import com.nextBaseCRM.utilities.ConfigurationReader;
-import com.nextBaseCRM.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 import org.testng.annotations.Test;
 
 public class userStory11 extends TestBase {
@@ -16,7 +14,8 @@ public class userStory11 extends TestBase {
 
 
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
+
 
         LoginPage loginPage = new LoginPage();
 
@@ -24,7 +23,10 @@ public class userStory11 extends TestBase {
 
         MainPage mainPage = new MainPage();
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
+
+        BrowserUtils.waitForClickablility(mainPage.macosButton,5);
+
 
 
         mainPage.macosButton.click();
