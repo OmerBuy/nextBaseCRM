@@ -26,7 +26,12 @@ public class Test_US6_AC2 extends TestBase {
         String actualText = appreciationPage.destinationBox.getText();
         String expectedText = "helpdesk19@cybertekschool.com";
 
+
+
         extentLogger.info("Verify the selected mail");
+
+        System.out.println("here is the conflict");
+
         Assert.assertEquals(actualText,expectedText,"verify the selected email");
 
         extentLogger.pass("PASS");
