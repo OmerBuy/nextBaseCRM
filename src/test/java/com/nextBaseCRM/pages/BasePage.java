@@ -77,6 +77,35 @@ public abstract class BasePage {
         }
     }
 
+    public void newNavigateMethod (String module , String tab) {
+
+        String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'menu-item-link-text')]";
+        String tabLocator = "//span/span[contains(text(),'"+ tab +"')]";
+
+
+        BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(moduleLocator)));
+        Driver.get().findElement(By.xpath(moduleLocator)).click();
+
+
+        // this if statement is added to handle the situation to click "MORE" tab
+        if (tab.equals("File") || tab.equals("Appreciation")||tab.equals("Announcement")||tab.equals("Workflow")){
+            Driver.get().findElement(By.id("feed-add-post-form-link-text")).click();
+            List<WebElement> moreElements = Driver.get().findElements(By.cssSelector(".menu-popup-item.menu-popup-no-icon"));
+            for (WebElement element : moreElements) {
+                if(element.getText().equals(tab)){
+                    element.click();
+                }
+            }
+        }
+        BrowserUtils.scrollToElement(Driver.get().findElement(By.xpath(tabLocator)));
+        Driver.get().findElement(By.xpath(tabLocator)).click();
+
+    }
+
+
+
+
+
     public void navigateWithSiteMap (String moduleName){
         WebElement siteMap = Driver.get().findElement(By.id("sitemap-menu"));
         siteMap.click();

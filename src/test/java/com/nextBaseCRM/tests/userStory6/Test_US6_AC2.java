@@ -29,6 +29,8 @@ public class Test_US6_AC2 extends TestBase {
         String actualText = appreciationPage.destinationBox.getText();
         String expectedText = "helpdesk19@cybertekschool.com";
 
+        System.out.println("here is the battle");
+
         extentLogger.info("Verify the selected mail");
         Assert.assertEquals(actualText,expectedText,"verify the selected email");
 
