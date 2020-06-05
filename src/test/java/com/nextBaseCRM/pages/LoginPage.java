@@ -1,5 +1,6 @@
 package com.nextBaseCRM.pages;
 
+
 import com.nextBaseCRM.utilities.ConfigurationReader;
 import com.nextBaseCRM.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -8,36 +9,35 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(Driver.get(), this);
     }
 
 
-    @FindBy(name ="USER_LOGIN")
+    @FindBy(name = "USER_LOGIN")
     public WebElement usernameInput;
 
-    @FindBy(name ="USER_PASSWORD")
+    @FindBy(name = "USER_PASSWORD")
     public WebElement passwordInput;
 
     @FindBy(className = "login-btn")
     public WebElement loginBtn;
 
-    public void login(String usernameStr, String passwordStr){
+    public void login(String usernameStr, String passwordStr) {
         usernameInput.sendKeys(usernameStr);
         passwordInput.sendKeys(passwordStr);
         loginBtn.click();
     }
 
-    public void loginAsHelpdesk(){
+    public void loginAsHelpdesk() {
         String username = ConfigurationReader.get("helpdesk_username");
         String password = ConfigurationReader.get("helpdesk_password");
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginBtn.click();
-
     }
 
-    public void loginAsMarketing(){
+    public void loginAsMarketing() {
         String username = ConfigurationReader.get("marketing_username");
         String password = ConfigurationReader.get("marketing_password");
         usernameInput.sendKeys(username);
@@ -45,7 +45,7 @@ public class LoginPage {
         loginBtn.click();
     }
 
-    public void loginAsHR(){
+    public void loginAsHR() {
         String username = ConfigurationReader.get("hr_username");
         String password = ConfigurationReader.get("hr_password");
         usernameInput.sendKeys(username);
@@ -53,8 +53,7 @@ public class LoginPage {
         loginBtn.click();
     }
 
-
-
-
-
 }
+
+
+
