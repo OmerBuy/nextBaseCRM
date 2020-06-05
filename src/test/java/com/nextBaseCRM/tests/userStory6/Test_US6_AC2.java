@@ -31,9 +31,18 @@ public class Test_US6_AC2 extends TestBase {
 
 
 
+
+        //we are trying to create a conflict
+        // let's solve the conflict
+        //more codes
+
+
+
+
         extentLogger.info("Verify the selected mail");
 
         System.out.println("here is the conflict");
+
 
         Assert.assertEquals(actualText,expectedText,"verify the selected email");
 
