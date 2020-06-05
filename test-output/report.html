@@ -45,6 +45,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
 			<span class='label blue darken-3 suite-start-time'>Jun 5, 2020 01:14:53 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Jun 3, 2020 10:28:35 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -125,6 +126,9 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
+						<span class='test-name'>Creating Quote Test</span>
+						<span class='test-time'>Jun 3, 2020 10:28:43 PM</span>
+						<span class='test-status right pass'>pass</span>
 						<span class='test-name'>Test Posts: add others' posts to favorate by clicking on the Star icon</span>
 						<span class='test-time'>Jun 5, 2020 01:14:59 AM</span>
 						<span class='test-status right pass'>pass</span>
@@ -134,6 +138,9 @@
 	<span class='label start-time'>Jun 5, 2020 01:14:59 AM</span>
 	<span class='label end-time'>Jun 5, 2020 01:15:06 AM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+432ms</span>
+	<span class='label start-time'>Jun 3, 2020 10:28:43 PM</span>
+	<span class='label end-time'>Jun 3, 2020 10:29:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+217ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -147,26 +154,68 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:28:43 PM</td>
+				<td class='step-details'>
+						Login as HelpDesk
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:28:51 PM</td>
+				<td class='step-details'>
+						Navigate to Appreciation
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:28:58 PM</td>
+				<td class='step-details'>
+						Click insert quote icon
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:28:59 PM</td>
+				<td class='step-details'>
+						Send a quote
+
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:29:01 PM</td>
 				<td class='timestamp'>1:15:03 AM</td>
 				<td class='step-details'>
 						add to favorate clicking on the Star icon
-					
+						Click sent button
+
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
 				<td class='timestamp'>1:15:06 AM</td>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>10:29:05 PM</td>
 				<td class='step-details'>
 						Verify that added to favorate
-					
+						Verify the sent quote
+
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
 				<td class='timestamp'>1:15:06 AM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:29:05 PM</td>
 				<td class='step-details'>
 						PASS: Contact Info Test
-					
+						PASS: Verify the quote that was just sent
+
 				</td>
 			</tr>
 		</tbody>
@@ -215,18 +264,21 @@
 				<div class='card-panel r'>
 					Start
 					<div class='panel-lead'>Jun 5, 2020 01:14:53 AM</div>
+					<div class='panel-lead'>Jun 3, 2020 10:28:35 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
 			 		<div class='panel-lead'>Jun 5, 2020 01:15:08 AM</div>
+			 		<div class='panel-lead'>Jun 3, 2020 10:29:08 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
 					<div class='panel-lead'>0h 0m 14s+869ms</div>
+					<div class='panel-lead'>0h 0m 33s+597ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -294,6 +346,7 @@
 		<script>
 			var timeline = {
 			        "Test Posts: add others' posts to favorate by clicking on the Star icon":6.432
+			        "Creating Quote Test":22.217
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
