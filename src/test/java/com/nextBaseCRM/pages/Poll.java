@@ -97,7 +97,7 @@ public class Poll extends BasePage{
     @FindBy (id = "lhe_button_editor_blogPostForm")
     public WebElement visiulEditor;
 
-    @FindBy (xpath = "//textarea[contains(@class,'bxhtmled-textarea')]")
+    @FindBy (xpath = "//body[contains(@contenteditable,'true')]")
     public WebElement messageBox;
     
     @FindBy (xpath = "//span[contains(@title,'Topic')]")
@@ -105,6 +105,9 @@ public class Poll extends BasePage{
 
     @FindBy (id = "POST_TITLE")
     public WebElement topicText;
+
+    @FindBy(xpath = "(//iFrame)[1]")
+    public WebElement iFrame;
 
 
 
@@ -129,6 +132,7 @@ public class Poll extends BasePage{
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
+
     }
 
     public void attachNameFile(String name ,String filePath){
@@ -151,6 +155,9 @@ public class Poll extends BasePage{
                 break;
             }
         }
+
+
+
 
 
     }
