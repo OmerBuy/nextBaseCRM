@@ -3,6 +3,7 @@ package com.nextBaseCRM.tests.userStory6;
 import com.nextBaseCRM.pages.AppreciationPage;
 import com.nextBaseCRM.pages.LoginPage;
 import com.nextBaseCRM.tests.TestBase;
+import com.nextBaseCRM.utilities.BrowserUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,7 +19,9 @@ public class Test_US6_AC2 extends TestBase {
         AppreciationPage appreciationPage = new AppreciationPage();
 
         extentLogger.info("Navigate to Appreciation");
-        appreciationPage.navigateToModule("Activity Stream", "Appreciation");
+        appreciationPage.navigateToModule("Activity Stream", "File");
+
+        BrowserUtils.waitFor(10);
 
         extentLogger.info("Select a given mail inside the list");
         appreciationPage.sendToEmployeesAndDepartments("helpdesk19@cybertekschool.com");
