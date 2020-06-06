@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Test_US2_AC3 extends TestBase {
-    @Test
+    @BeforeMethod
     public void gotoActivityTaskPage() {
         //FROM ACTIVITY-TASK PAGE 1. User should be able to click on upload files icon to upload files and pictures from local disks,
         //   download from external drive, select documents from bixtrix24, and create files to upload.
@@ -24,7 +24,6 @@ public class Test_US2_AC3 extends TestBase {
     @Test
     public void tc1 () throws InterruptedException {
 
-        new LoginPage().loginAsHR();
         TaskAndLocators taskAndLocators = new TaskAndLocators();
         taskAndLocators.navigateToModule("Activity Stream", "Task");
 
