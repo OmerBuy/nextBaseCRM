@@ -27,7 +27,7 @@ public class Test_US7_AC6 extends TestBase {
         announcementPage1.selectFromBitrix.click();
 
 
-
+        //hghghgh0000000000000000000
 
         //announcementPage.moreButton.click();
 
